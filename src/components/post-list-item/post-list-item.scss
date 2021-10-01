@@ -1,0 +1,52 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 20px 35px 15px 35px;
+  color: #212529;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  transition: all 0.2s ease-in-out;
+  span {
+    cursor: pointer;
+  }
+  button {
+    width: 35px;
+    height: 35px;
+    margin: 3px 4px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .star {
+    color: #ffd700;
+    transition: all 0.2s ease-in-out;
+  }
+  .trash {
+    color: red;
+  }
+  .heart {
+    font-size: 15px;
+    color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.2s ease-in-out;
+  }
+}
+.list-item.important {
+  color: #ffd700;
+  .star {
+    color: #aeaeae;
+  }
+}
+.list-item.like {
+  .heart {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
